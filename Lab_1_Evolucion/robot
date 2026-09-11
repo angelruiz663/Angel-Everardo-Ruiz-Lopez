@@ -12,7 +12,7 @@ def limpiar_pantalla():
 # ==========================================================
 def evaluar_robot(adn):
     posicion = [0, 0]  # Coordenadas iniciales: [fila, columna]
-
+    posicion_inicial = 100
     # El robot ejecuta su secuencia genetica a ciegas
     for comando in adn:
         if comando == 'U':
@@ -23,12 +23,14 @@ def evaluar_robot(adn):
             posicion[1] -= 1
         elif comando == 'R':
             posicion[1] += 1
+        if posicion[0] == 4 and posicion[1] == 4:
+            puntaje_inicial -=50
 
     cubo = [7, 7]  # Coordenadas de la meta
     distancia = abs(cubo[0] - posicion[0]) + abs(cubo[1] - posicion[1])
 
     # El fitness base premia la proximidad a la meta
-    puntaje = 100 - distancia
+    puntaje = puntaje_inicial - distancia
     return puntaje
 
 
