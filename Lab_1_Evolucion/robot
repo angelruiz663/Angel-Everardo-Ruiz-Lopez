@@ -25,6 +25,7 @@ def evaluar_robot(adn):
             posicion[1] += 1
         if posicion[0] == 4 and posicion[1] == 4:
             puntaje_inicial -=50
+# agregue la variable puntaje final = 100 y le reduje en 50 cada que la pocicion fuese [4,4] 
 
     cubo = [7, 7]  # Coordenadas de la meta
     distancia = abs(cubo[0] - posicion[0]) + abs(cubo[1] - posicion[1])
