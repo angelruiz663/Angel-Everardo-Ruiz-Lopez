@@ -12,6 +12,7 @@ def limpiar_pantalla():
 # ZONA DE TRABAJO (LA REGLA DE SUPERVIVENCIA)
 # ==========================================================
 def evaluar_robot(adn):
+    puntaje_inicial = 100
     posicion = [0, 0]  # Coordenadas iniciales: [fila, columna]
     posicion_inicial = 100
     # El robot ejecuta su secuencia genetica a ciegas
